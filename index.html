@@ -1,0 +1,484 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<template id="__bundler_thumbnail" data-bg-color="#123a63">
+  <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+    <circle cx="100" cy="100" r="70" fill="#6cbf3f"/>
+  </svg>
+</template>
+<helmet>
+<meta name="ext-resource-dependency" content="assets/logo-cosmetica-nacional.jpg" data-resource-id="logo1" />
+<meta name="ext-resource-dependency" content="assets/logo-minera-meridian.jpg" data-resource-id="logo2" />
+<meta name="ext-resource-dependency" content="assets/logo-hospital-san-jose.jpg" data-resource-id="logo3" />
+<meta name="ext-resource-dependency" content="assets/logo-pf.jpg" data-resource-id="logo4" />
+<meta name="ext-resource-dependency" content="assets/logo-aza.jpg" data-resource-id="logo5" />
+<meta name="ext-resource-dependency" content="assets/logo-cinemark.jpg" data-resource-id="logo6" />
+<meta name="ext-resource-dependency" content="assets/logo-nestle.jpg" data-resource-id="logo7" />
+<meta name="ext-resource-dependency" content="assets/logo-andes-airport.jpg" data-resource-id="logo8" />
+<meta name="ext-resource-dependency" content="assets/logo-panpacific.jpg" data-resource-id="logo9" />
+<meta name="ext-resource-dependency" content="assets/logo-gador.jpg" data-resource-id="logo10" />
+<meta name="ext-resource-dependency" content="assets/producto-tabla-multiuso-final.jpg" data-resource-id="prod1" />
+<meta name="ext-resource-dependency" content="assets/producto-caucho-metal-final.jpg" data-resource-id="prod2" />
+<meta name="ext-resource-dependency" content="assets/producto-tabla-cocina-final.jpg" data-resource-id="prod3" />
+<meta name="ext-resource-dependency" content="assets/producto-soporte-malla-final.jpg" data-resource-id="prod4" />
+<meta name="ext-resource-dependency" content="assets/producto-estacas-mineria.jpg" data-resource-id="prod5" />
+<meta name="ext-resource-dependency" content="assets/producto-pisos-antideslizantes-final.jpg" data-resource-id="prod6" />
+<meta name="ext-resource-dependency" content="assets/producto-gorra-casco-final.jpg" data-resource-id="prod7" />
+<meta name="ext-resource-dependency" content="assets/producto-dispositivos-ffaa-final.jpg" data-resource-id="prod8" />
+<meta name="ext-resource-dependency" content="assets/producto-topes-puertas-final.jpg" data-resource-id="prod9" />
+<meta name="ext-resource-dependency" content="assets/producto-laminas-pvc.jpg" data-resource-id="prod10" />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+  @keyframes fadeUp { from { opacity:0; transform:translateY(16px);} to {opacity:1; transform:translateY(0);} }
+  .pm-reveal { opacity:0; transform:translateY(28px); transition:opacity 0.7s ease, transform 0.7s ease; }
+  .pm-reveal.is-visible { opacity:1; transform:translateY(0); }
+  @keyframes pmScroll { from { transform:translateX(0);} to { transform:translateX(-50%);} }
+  body { margin:0; }
+  .pm-carousel::-webkit-scrollbar { display:none; }
+  .pm-hamburger { display:none; }
+  @media (max-width: 900px) {
+    .pm-nav-links { display:none !important; }
+    .pm-hamburger { display:flex !important; }
+    .pm-nav { padding-left:20px !important; padding-right:20px !important; }
+    .pm-hero-grid { grid-template-columns:1fr !important; padding:56px 24px !important; text-align:center; }
+    .pm-hero-grid > div:first-child { align-items:center; display:flex; flex-direction:column; }
+    .pm-hero-grid p { max-width:100% !important; }
+    .pm-hero-title { font-size:34px !important; }
+    .pm-quienes-grid { grid-template-columns:1fr !important; }
+    .pm-diff-grid { grid-template-columns:repeat(2,1fr) !important; }
+    .pm-proceso-grid { grid-template-columns:repeat(2,1fr) !important; }
+    .pm-faq-grid { grid-template-columns:repeat(2,1fr) !important; }
+    .pm-form-grid { grid-template-columns:1fr !important; }
+    .pm-form-fields { grid-template-columns:1fr !important; }
+    .pm-form-fields > * { grid-column:span 1 !important; }
+    .pm-section-pad { padding-left:24px !important; padding-right:24px !important; }
+    .pm-section-title { font-size:28px !important; }
+  }
+  @media (max-width: 560px) {
+    .pm-diff-grid, .pm-proceso-grid, .pm-faq-grid { grid-template-columns:1fr !important; }
+    .pm-cat-card { flex-basis:170px !important; }
+  }
+</style>
+</helmet>
+<div style="font-family:Arial,Helvetica,sans-serif;background:#ffffff;color:#123a63;width:100%;overflow-x:hidden;">
+
+  <!-- NAV -->
+  <div class="pm-nav" style="position:sticky;top:0;z-index:50;background:#ffffff;border-bottom:1px solid #dce6f0;display:flex;align-items:center;justify-content:space-between;padding:14px 48px;box-shadow:0 1px 0 rgba(12,44,74,0.04);">
+    <div style="display:flex;align-items:center;gap:10px;">
+      <img src="assets/logo-plasticmarket.jpg" alt="PlasticMarket" style="height:42px;width:42px;object-fit:cover;border-radius:8px;"/>
+      <div style="line-height:1.1;">
+        <div style="font-size:18px;font-weight:700;letter-spacing:0.2px;">PlasticMarket</div>
+        <div style="font-size:10px;color:#3f7a1f;letter-spacing:1px;text-transform:uppercase;">Ideas que venden más</div>
+      </div>
+    </div>
+    <div class="pm-nav-links" style="display:flex;align-items:center;gap:28px;">
+      <a href="#quienes-somos" style="color:#123a63;text-decoration:none;font-size:14px;" style-hover="color:#6cbf3f;">Quiénes somos</a>
+      <a href="#antibacterial" style="color:#123a63;text-decoration:none;font-size:14px;" style-hover="color:#6cbf3f;">Antibacterial</a>
+      <a href="#catalogo" style="color:#123a63;text-decoration:none;font-size:14px;" style-hover="color:#6cbf3f;">Catálogo</a>
+      <a href="#proceso" style="color:#123a63;text-decoration:none;font-size:14px;" style-hover="color:#6cbf3f;">Proceso</a>
+      <a href="#faq" style="color:#123a63;text-decoration:none;font-size:14px;" style-hover="color:#6cbf3f;">FAQ</a>
+      <a href="#cotizar" style="background:#6cbf3f;color:#ffffff;padding:10px 20px;border-radius:6px;font-weight:700;font-size:14px;text-decoration:none;" style-hover="background:#7ed14f;">Solicitar cotización</a>
+    </div>
+    <button class="pm-hamburger" onClick="{{ toggleMobileMenu }}" style="align-items:center;justify-content:center;width:40px;height:40px;background:none;border:1px solid #dce6f0;border-radius:6px;cursor:pointer;">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#123a63" stroke-width="2"><path d="M3 6h18M3 12h18M3 18h18"/></svg>
+    </button>
+  </div>
+  <sc-if value="{{ mobileMenuOpen }}" hint-placeholder-val="{{ false }}">
+    <div style="background:#ffffff;border-bottom:1px solid #dce6f0;display:flex;flex-direction:column;padding:16px 24px;gap:16px;">
+      <a href="#quienes-somos" onClick="{{ closeMobileMenu }}" style="color:#123a63;text-decoration:none;font-size:15px;">Quiénes somos</a>
+      <a href="#antibacterial" onClick="{{ closeMobileMenu }}" style="color:#123a63;text-decoration:none;font-size:15px;">Antibacterial</a>
+      <a href="#catalogo" onClick="{{ closeMobileMenu }}" style="color:#123a63;text-decoration:none;font-size:15px;">Catálogo</a>
+      <a href="#proceso" onClick="{{ closeMobileMenu }}" style="color:#123a63;text-decoration:none;font-size:15px;">Proceso</a>
+      <a href="#faq" onClick="{{ closeMobileMenu }}" style="color:#123a63;text-decoration:none;font-size:15px;">FAQ</a>
+      <a href="#cotizar" onClick="{{ closeMobileMenu }}" style="background:#6cbf3f;color:#ffffff;padding:12px;border-radius:6px;font-weight:700;font-size:15px;text-decoration:none;text-align:center;">Solicitar cotización</a>
+    </div>
+  </sc-if>
+
+  <!-- HERO -->
+  <div style="background:#123a63;">
+    <div class="pm-hero-grid" style="display:grid;grid-template-columns:1.05fr 0.95fr;gap:40px;padding:90px 48px 80px;align-items:center;max-width:1440px;margin:0 auto;">
+      <div style="animation:fadeUp 0.6s ease both;">
+        <div style="display:inline-flex;align-items:center;gap:8px;background:rgba(255,255,255,0.1);border:1px solid rgba(255,255,255,0.25);padding:6px 14px;border-radius:999px;font-size:13px;color:#ffffff;margin-bottom:22px;">
+          <span style="width:7px;height:7px;border-radius:50%;background:#6cbf3f;"></span>
+          Matricería · Inyección · Extrusión · Coextrusión
+        </div>
+        <h1 class="pm-hero-title" style="font-family:'Montserrat',Arial,sans-serif;font-size:52px;line-height:1.08;margin:0 0 22px;font-weight:700;color:#ffffff;">
+          Piezas plásticas a medida, en el color y compuesto exacto que tu proyecto necesita
+        </h1>
+        <p style="font-size:18px;line-height:1.6;color:#cfe0f0;max-width:560px;margin:0 0 32px;">
+          Diseñamos y fabricamos matricería, inyección, extrusión y coextrusión de plástico para empresas manufactureras y constructoras en Chile, Miami e importación. Incluye compuesto antibacterial y soluciones con reciclaje industrial.
+        </p>
+        <div style="display:flex;gap:16px;flex-wrap:wrap;align-items:center;">
+          <a href="#cotizar" style="background:#6cbf3f;color:#ffffff;padding:16px 30px;border-radius:8px;font-weight:700;font-size:16px;text-decoration:none;" style-hover="background:#7ed14f;">Solicitar cotización</a>
+        </div>
+      </div>
+      <div style="position:relative;display:flex;align-items:center;justify-content:center;">
+        <img src="assets/logo-mark-hero.png" alt="PlasticMarket" style="width:100%;max-width:520px;height:auto;"/>
+      </div>
+    </div>
+  </div>
+
+  <!-- MARCAS -->
+  <div style="padding:32px 0;overflow:hidden;background:transparent;">
+    <div style="display:flex;width:max-content;animation:pmScroll 22s linear infinite;gap:64px;align-items:center;">
+      <sc-for list="{{ clientLogos }}" as="c" hint-placeholder-count="12">
+        <img src="{{ c }}" alt="cliente" style="height:36px;width:auto;max-width:140px;object-fit:contain;"/>
+      </sc-for>
+    </div>
+  </div>
+
+  <!-- QUIENES SOMOS -->
+  <div id="quienes-somos" class="pm-section-pad pm-reveal" style="padding:90px 48px;border-top:1px solid #dce6f0;background:#f4f8fb;">
+    <div class="pm-quienes-grid" style="max-width:1200px;margin:0 auto;display:grid;grid-template-columns:1.2fr 0.8fr;gap:56px;align-items:center;">
+      <div>
+        <div style="font-size:13px;color:#3f7a1f;text-transform:uppercase;letter-spacing:1.5px;font-weight:700;margin-bottom:12px;">Quiénes somos</div>
+        <h2 style="font-family:'Montserrat',Arial,sans-serif;font-size:36px;margin:0 0 20px;">Especialistas en plástico a medida, desde la matriz hasta la pieza final</h2>
+        <p style="font-size:16px;line-height:1.7;color:#3f5f7a;margin:0 0 32px;">
+          En PlasticMarket integramos matricería, inyección, extrusión y coextrusión para empresas manufactureras y constructoras que buscan innovar. Fabricamos en Chile, operamos en Miami e importamos materia prima directamente, con soluciones a medida en forma, color y compuesto.
+        </p>
+        <div style="display:inline-flex;flex-direction:column;align-items:flex-start;gap:6px;background:#123a63;color:#ffffff;padding:28px 44px;border-radius:16px;">
+          <div style="font-family:'Montserrat',Arial,sans-serif;font-size:38px;font-weight:800;line-height:1;">N°1</div>
+          <div style="font-size:13px;color:#cfe0f0;max-width:260px;">Únicos en Chile con compuesto antibacterial integrado al plástico</div>
+        </div>
+      </div>
+      <div>
+        <img src="assets/certificado-plasticmarket-llc.jpg" alt="Certificado de constitución PlasticMarket LLC, Florida" style="width:100%;border-radius:12px;border:1px solid #cfe0f0;box-shadow:0 8px 24px rgba(18,58,99,0.12);"/>
+        <div style="font-size:12px;color:#6d89a3;text-align:center;margin-top:10px;">Constitución legal PlasticMarket LLC · Florida, EE.UU.</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ANTIBACTERIAL -->
+  <div id="antibacterial" class="pm-section-pad pm-reveal" style="padding:90px 48px;max-width:1440px;margin:0 auto;">
+    <div style="background:#123a63;border-radius:16px;padding:56px;color:#ffffff;">
+      <div style="font-size:12px;color:#a9d98c;text-transform:uppercase;letter-spacing:1.5px;font-weight:700;margin-bottom:16px;">Diferenciador exclusivo</div>
+      <h3 style="font-family:'Montserrat',Arial,sans-serif;font-size:30px;margin:0 0 16px;">Compuesto antibacterial integrado al plástico</h3>
+      <p style="font-size:15px;line-height:1.7;color:#cfe0f0;margin:0 0 20px;max-width:720px;">
+        Fabricamos piezas con aditivo antibacterial incorporado directamente en el material, ideal para industrias que exigen higiene: alimentaria, salud, manufactura y equipamiento público. La protección queda integrada al plástico, no es un recubrimiento superficial.
+      </p>
+      <a href="#cotizar" style="display:inline-block;background:#6cbf3f;color:#ffffff;padding:16px 30px;border-radius:8px;font-weight:700;font-size:16px;text-decoration:none;" style-hover="background:#7ed14f;">Cotizar con compuesto antibacterial →</a>
+    </div>
+  </div>
+
+  <!-- DIFERENCIADOR + ECONOMIA CIRCULAR -->
+  <div class="pm-section-pad pm-reveal" style="background:#f4f8fb;padding:90px 48px;border-top:1px solid #dce6f0;border-bottom:1px solid #dce6f0;">
+    <div style="max-width:1440px;margin:0 auto;">
+      <div style="max-width:640px;margin:0 auto 56px;text-align:center;">
+        <div style="font-size:13px;color:#3f7a1f;text-transform:uppercase;letter-spacing:1.5px;font-weight:700;margin-bottom:12px;">Por qué PlasticMarket</div>
+        <h2 class="pm-section-title" style="font-family:'Montserrat',Arial,sans-serif;font-size:36px;margin:0;">Nuestro diferenciador</h2>
+      </div>
+      <div class="pm-diff-grid" style="display:grid;grid-template-columns:repeat(3,1fr);gap:24px;margin-bottom:24px;">
+        <div style="background:#ffffff;border:1px solid #cfe0f0;border-radius:14px;padding:30px;box-shadow:0 1px 3px rgba(18,58,99,0.06);">
+          <div style="width:44px;height:44px;border-radius:10px;background:#6cbf3f;margin-bottom:18px;display:flex;align-items:center;justify-content:center;">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#ffffff" stroke-width="1.8"><path d="M12 1v22M17 5H9.5a3.5 3.5 0 000 7h5a3.5 3.5 0 010 7H6"/></svg>
+          </div>
+          <div style="font-size:18px;font-weight:700;margin-bottom:8px;">Precio competitivo</div>
+          <div style="font-size:14px;line-height:1.6;color:#4d6d8a;">Estructura de costos optimizada gracias a producción propia e importación directa de materia prima.</div>
+        </div>
+        <div style="background:#ffffff;border:1px solid #cfe0f0;border-radius:14px;padding:30px;box-shadow:0 1px 3px rgba(18,58,99,0.06);">
+          <div style="width:44px;height:44px;border-radius:10px;background:#6cbf3f;margin-bottom:18px;display:flex;align-items:center;justify-content:center;">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#ffffff" stroke-width="1.8"><path d="M12 2l3 6 6.5 1-4.7 4.6 1.1 6.4-5.9-3.1-5.9 3.1 1.1-6.4L2 9l6.5-1z"/></svg>
+          </div>
+          <div style="font-size:18px;font-weight:700;margin-bottom:8px;">Calidad certificada</div>
+          <div style="font-size:14px;line-height:1.6;color:#4d6d8a;">Control de calidad en cada etapa, desde matricería hasta pieza final.</div>
+        </div>
+        <div style="background:#ffffff;border:1px solid #cfe0f0;border-radius:14px;padding:30px;box-shadow:0 1px 3px rgba(18,58,99,0.06);">
+          <div style="width:44px;height:44px;border-radius:10px;background:#6cbf3f;margin-bottom:18px;display:flex;align-items:center;justify-content:center;">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#ffffff" stroke-width="1.8"><path d="M13 2L4 14h7l-1 8 9-12h-7z"/></svg>
+          </div>
+          <div style="font-size:18px;font-weight:700;margin-bottom:8px;">Rapidez de entrega</div>
+          <div style="font-size:14px;line-height:1.6;color:#4d6d8a;">Producción continua y planificación ajustada a tus tiempos de proyecto.</div>
+        </div>
+        <div style="background:#ffffff;border:1px solid #cfe0f0;border-radius:14px;padding:30px;box-shadow:0 1px 3px rgba(18,58,99,0.06);">
+          <div style="width:44px;height:44px;border-radius:10px;background:#6cbf3f;margin-bottom:18px;display:flex;align-items:center;justify-content:center;">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#ffffff" stroke-width="1.8"><rect x="3" y="9" width="7" height="12"/><rect x="14" y="3" width="7" height="18"/></svg>
+          </div>
+          <div style="font-size:18px;font-weight:700;margin-bottom:8px;">Capacidad instalada</div>
+          <div style="font-size:14px;line-height:1.6;color:#4d6d8a;">Infraestructura para inyección, extrusión y coextrusión a distintas escalas.</div>
+        </div>
+        <div style="background:#ffffff;border:1px solid #cfe0f0;border-radius:14px;padding:30px;box-shadow:0 1px 3px rgba(18,58,99,0.06);">
+          <div style="width:44px;height:44px;border-radius:10px;background:#6cbf3f;margin-bottom:18px;display:flex;align-items:center;justify-content:center;">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#ffffff" stroke-width="1.8"><path d="M12 2a5 5 0 015 5c0 3-2 4-2 7h-6c0-3-2-4-2-7a5 5 0 015-5z"/><path d="M9 21h6M10 18h4"/></svg>
+          </div>
+          <div style="font-size:18px;font-weight:700;margin-bottom:8px;">Soluciones a medida</div>
+          <div style="font-size:14px;line-height:1.6;color:#4d6d8a;">Diseño de matriz y color específico según tu especificación técnica.</div>
+        </div>
+        <div style="background:#ffffff;border:1px solid #cfe0f0;border-radius:14px;padding:30px;box-shadow:0 1px 3px rgba(18,58,99,0.06);">
+          <div style="width:44px;height:44px;border-radius:10px;background:#6cbf3f;margin-bottom:18px;display:flex;align-items:center;justify-content:center;">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#ffffff" stroke-width="1.8"><path d="M12 2l8 4v6c0 5-3.5 8.5-8 10-4.5-1.5-8-5-8-10V6z"/><path d="M9 12l2 2 4-4"/></svg>
+          </div>
+          <div style="font-size:18px;font-weight:700;margin-bottom:8px;">Certificación de marca</div>
+          <div style="font-size:14px;line-height:1.6;color:#4d6d8a;">Respaldo de años de trayectoria y clientes reconocidos en la industria.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- CATALOGO / CAROUSEL -->
+  <div id="catalogo" class="pm-section-pad pm-reveal" style="padding:90px 48px;">
+    <div style="max-width:640px;margin:0 auto 48px;text-align:center;">
+      <div style="font-size:13px;color:#3f7a1f;text-transform:uppercase;letter-spacing:1.5px;font-weight:700;margin-bottom:12px;">Catálogo</div>
+      <h2 class="pm-section-title" style="font-family:'Montserrat',Arial,sans-serif;font-size:36px;margin:0;">Productos y proyectos realizados</h2>
+    </div>
+    <div style="max-width:1200px;margin:0 auto;display:flex;align-items:center;gap:16px;">
+      <button onClick="{{ scrollPrev }}" style="flex-shrink:0;width:44px;height:44px;border-radius:50%;border:1px solid #cfe0f0;background:#ffffff;color:#123a63;font-size:18px;cursor:pointer;" style-hover="background:#eaf2fa;">‹</button>
+      <div ref="{{ carouselRef }}" class="pm-carousel" style="display:flex;gap:20px;overflow-x:auto;scroll-behavior:smooth;scrollbar-width:none;padding:6px 2px;">
+        <sc-for list="{{ catalogo }}" as="p" hint-placeholder-count="8">
+          <div class="pm-cat-card" style="flex:0 0 220px;scroll-snap-align:center;cursor:pointer;" onClick="{{ p.openModal }}">
+            <div style="aspect-ratio:1;border-radius:12px;overflow:hidden;border:1px solid #dce6f0;margin-bottom:10px;">
+              <img src="{{ p.photo }}" alt="{{ p.name }}" style="width:100%;height:100%;object-fit:cover;"/>
+            </div>
+            <div style="font-size:14px;font-weight:600;text-align:center;">{{ p.name }}</div>
+          </div>
+        </sc-for>
+      </div>
+      <button onClick="{{ scrollNext }}" style="flex-shrink:0;width:44px;height:44px;border-radius:50%;border:1px solid #cfe0f0;background:#ffffff;color:#123a63;font-size:18px;cursor:pointer;" style-hover="background:#eaf2fa;">›</button>
+    </div>
+  </div>
+
+  <sc-if value="{{ activeProduct }}" hint-placeholder-val="{{ false }}">
+    <div onClick="{{ closeModal }}" style="position:fixed;inset:0;background:rgba(12,44,74,0.55);z-index:100;display:flex;align-items:center;justify-content:center;padding:24px;">
+      <div style="max-width:520px;width:100%;overflow:hidden;box-shadow:0 20px 60px rgba(12,44,74,0.3);border-radius:16px;background:#ffffff;" onClick="{{ stopPropagation }}">
+        <div style="aspect-ratio:16/10;cursor:zoom-in;" onClick="{{ activeProduct.openFull }}">
+          <img src="{{ activeProduct.photo }}" alt="{{ activeProduct.name }}" style="width:100%;height:100%;object-fit:cover;"/>
+        </div>
+        <div style="padding:28px;">
+          <h3 style="font-family:'Montserrat',Arial,sans-serif;font-size:22px;margin:0 0 14px;color:#123a63;">{{ activeProduct.name }}</h3>
+          <sc-if value="{{ activeProduct.desc }}">
+            <p style="font-size:14px;line-height:1.6;color:#4d6d8a;margin:0 0 16px;">{{ activeProduct.desc }}</p>
+          </sc-if>
+          <div style="display:flex;flex-direction:column;gap:10px;margin-bottom:24px;">
+            <sc-for list="{{ activeProduct.bullets }}" as="b" hint-placeholder-count="3">
+              <div style="display:flex;gap:10px;align-items:flex-start;font-size:14px;color:#123a63;font-weight:600;">
+                <span style="width:7px;height:7px;border-radius:50%;background:#6cbf3f;margin-top:7px;flex-shrink:0;"></span>
+                {{ b }}
+              </div>
+            </sc-for>
+          </div>
+          <div style="display:flex;gap:12px;">
+            <a href="{{ activeProduct.waLink }}" target="_blank" style="flex:1;text-align:center;background:#25D366;color:#ffffff;padding:14px;border-radius:8px;font-weight:700;font-size:14px;text-decoration:none;">Cotizar por WhatsApp</a>
+            <button onClick="{{ closeModal }}" style="background:#f4f8fb;border:1px solid #cfe0f0;color:#123a63;padding:14px 20px;border-radius:8px;font-weight:600;font-size:14px;cursor:pointer;">Cerrar</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </sc-if>
+
+  <sc-if value="{{ fullImage }}" hint-placeholder-val="{{ false }}">
+    <div onClick="{{ closeFull }}" style="position:fixed;inset:0;background:rgba(8,20,34,0.85);z-index:110;display:flex;align-items:center;justify-content:center;padding:40px;cursor:zoom-out;">
+      <img src="{{ fullImage }}" alt="vista completa" style="max-width:100%;max-height:100%;object-fit:contain;border-radius:8px;"/>
+    </div>
+  </sc-if>
+
+  <!-- PROCESO -->
+  <div id="proceso" class="pm-section-pad pm-reveal" style="background:#f4f8fb;padding:90px 48px;border-top:1px solid #dce6f0;border-bottom:1px solid #dce6f0;">
+    <div style="max-width:1440px;margin:0 auto;">
+      <div style="max-width:640px;margin:0 auto 56px;text-align:center;">
+        <div style="font-size:13px;color:#3f7a1f;text-transform:uppercase;letter-spacing:1.5px;font-weight:700;margin-bottom:12px;">Proceso</div>
+        <h2 class="pm-section-title" style="font-family:'Montserrat',Arial,sans-serif;font-size:36px;margin:0;">Así cotizas y produces con nosotros</h2>
+      </div>
+      <div class="pm-proceso-grid" style="display:grid;grid-template-columns:repeat(4,1fr);gap:24px;">
+        <sc-for list="{{ proceso }}" as="step" hint-placeholder-count="4">
+          <div style="position:relative;padding:30px 24px;background:#ffffff;border-radius:14px;border:1px solid #cfe0f0;box-shadow:0 1px 3px rgba(18,58,99,0.06);">
+            <div style="font-family:'Montserrat',Arial,sans-serif;font-size:34px;color:#6cbf3f;font-weight:700;margin-bottom:14px;">{{ step.num }}</div>
+            <div style="font-size:16px;font-weight:700;margin-bottom:8px;">{{ step.title }}</div>
+            <div style="font-size:13px;line-height:1.6;color:#4d6d8a;">{{ step.text }}</div>
+          </div>
+        </sc-for>
+      </div>
+    </div>
+  </div>
+
+  <!-- FORM -->
+  <div id="cotizar" class="pm-form-grid pm-section-pad pm-reveal" style="padding:90px 48px;max-width:1440px;margin:0 auto;display:grid;grid-template-columns:0.9fr 1.1fr;gap:60px;align-items:start;">
+    <div>
+      <div style="font-size:13px;color:#3f7a1f;text-transform:uppercase;letter-spacing:1.5px;font-weight:700;margin-bottom:12px;">Solicitar cotización</div>
+      <h2 style="font-family:'Montserrat',Arial,sans-serif;font-size:36px;margin:0 0 20px;">Cuéntanos tu proyecto y te respondemos con una propuesta técnica</h2>
+      <p style="font-size:15px;line-height:1.7;color:#3f5f7a;margin:0 0 32px;">Incluye tipo de pieza, cantidad estimada, color y si requieres compuesto antibacterial o material reciclado.</p>
+      <div style="display:flex;flex-direction:column;gap:16px;">
+        <div style="font-size:15px;color:#123a63;"><strong>WhatsApp / Teléfono:</strong> +56 9 3372 2400</div>
+        <div style="font-size:15px;color:#123a63;"><strong>Correo:</strong> ventas@plasticmarket.com</div>
+        <div style="font-size:15px;color:#123a63;"><strong>Chile:</strong> <a href="https://www.google.com/maps/search/?api=1&query=Av.+Quilín+2756,+Quilín,+Santiago,+Chile" target="_blank" style="color:#3f7a1f;text-decoration:none;" style-hover="color:#6cbf3f;">Av. Quilín 2756, Quilín, Santiago de Chile</a></div>
+        <div style="font-size:15px;color:#123a63;"><strong>Miami:</strong> <a href="https://www.google.com/maps/search/?api=1&query=2S+Biscayne+Boulevard+Suite+3200+%234974,+Miami,+FL+33131" target="_blank" style="color:#3f7a1f;text-decoration:none;" style-hover="color:#6cbf3f;">2S Biscayne Boulevard Suite 3200 #4974, Miami, FL 33131</a></div>
+      </div>
+    </div>
+    <div style="background:#ffffff;border:1px solid #cfe0f0;border-radius:16px;padding:36px;box-shadow:0 2px 8px rgba(18,58,99,0.08);">
+      <sc-if value="{{ formSent }}" hint-placeholder-val="{{ false }}">
+        <div style="text-align:center;padding:60px 20px;">
+          <div style="font-size:22px;font-weight:700;margin-bottom:10px;">¡Solicitud recibida!</div>
+          <div style="font-size:14px;color:#4d6d8a;">Nuestro equipo técnico te contactará dentro de las próximas 24 horas.</div>
+        </div>
+      </sc-if>
+      <sc-if value="{{ formNotSent }}" hint-placeholder-val="{{ true }}">
+        <div class="pm-form-fields" style="display:grid;grid-template-columns:1fr 1fr;gap:16px;">
+          <input placeholder="Nombre" style="grid-column:span 1;background:#f4f8fb;border:1px solid #cfe0f0;border-radius:8px;padding:14px;color:#123a63;font-size:14px;" value="{{ form.nombre }}" onChange="{{ setField_nombre }}"/>
+          <input placeholder="Empresa" style="grid-column:span 1;background:#f4f8fb;border:1px solid #cfe0f0;border-radius:8px;padding:14px;color:#123a63;font-size:14px;" value="{{ form.empresa }}" onChange="{{ setField_empresa }}"/>
+          <input placeholder="Correo" style="grid-column:span 1;background:#f4f8fb;border:1px solid #cfe0f0;border-radius:8px;padding:14px;color:#123a63;font-size:14px;" value="{{ form.correo }}" onChange="{{ setField_correo }}"/>
+          <input placeholder="Teléfono" style="grid-column:span 1;background:#f4f8fb;border:1px solid #cfe0f0;border-radius:8px;padding:14px;color:#123a63;font-size:14px;" value="{{ form.telefono }}" onChange="{{ setField_telefono }}"/>
+          <select style="grid-column:span 2;background:#f4f8fb;border:1px solid #cfe0f0;border-radius:8px;padding:14px;color:#123a63;font-size:14px;" value="{{ form.tipo }}" onChange="{{ setField_tipo }}">
+            <option value="">Tipo de proyecto</option>
+            <option value="inyeccion">Inyección de plástico</option>
+            <option value="extrusion">Extrusión / Coextrusión</option>
+            <option value="matriceria">Matricería</option>
+            <option value="otro">Otro</option>
+            <option value="antibacterial">Compuesto antibacterial</option>
+          </select>
+          <textarea placeholder="Describe cantidad estimada, color y detalles del proyecto" style="grid-column:span 2;background:#f4f8fb;border:1px solid #cfe0f0;border-radius:8px;padding:14px;color:#123a63;font-size:14px;min-height:100px;resize:vertical;" value="{{ form.mensaje }}" onChange="{{ setField_mensaje }}"></textarea>
+          <button onClick="{{ submitForm }}" style="grid-column:span 2;background:#6cbf3f;color:#ffffff;border:none;padding:16px;border-radius:8px;font-weight:700;font-size:15px;cursor:pointer;" style-hover="background:#7ed14f;">Enviar y solicitar cotización</button>
+        </div>
+      </sc-if>
+    </div>
+  </div>
+
+  <!-- FAQ -->
+  <div id="faq" class="pm-section-pad pm-reveal" style="padding:90px 48px;">
+    <div style="max-width:640px;margin:0 auto 48px;text-align:center;">
+      <div style="font-size:13px;color:#3f7a1f;text-transform:uppercase;letter-spacing:1.5px;font-weight:700;margin-bottom:12px;">Preguntas frecuentes</div>
+      <h2 class="pm-section-title" style="font-family:'Montserrat',Arial,sans-serif;font-size:36px;margin:0;">Resolvemos tus dudas técnicas</h2>
+    </div>
+    <div class="pm-faq-grid" style="max-width:1200px;margin:0 auto;display:grid;grid-template-columns:repeat(4,1fr);gap:20px;">
+      <sc-for list="{{ faqs }}" as="faq" hint-placeholder-count="6">
+        <div style="border:1px solid #dce6f0;border-radius:12px;padding:20px;background:#ffffff;box-shadow:0 1px 3px rgba(18,58,99,0.06);">
+          <div style="font-size:14px;font-weight:700;margin-bottom:10px;">{{ faq.q }}</div>
+          <div style="font-size:13px;line-height:1.6;color:#4d6d8a;">{{ faq.a }}</div>
+        </div>
+      </sc-for>
+    </div>
+  </div>
+
+  <!-- FOOTER -->
+  <div style="border-top:1px solid #dce6f0;padding:40px 48px;">
+    <div style="max-width:1440px;margin:0 auto;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:20px;">
+      <div style="display:flex;align-items:center;gap:10px;">
+        <img src="assets/logo-plasticmarket.jpg" alt="PlasticMarket" style="height:32px;width:32px;object-fit:cover;border-radius:6px;"/>
+        <span style="font-size:14px;color:#6d89a3;">© 2026 PlasticMarket. Todos los derechos reservados.</span>
+      </div>
+      <div style="font-size:13px;color:#6d89a3;">ventas@plasticmarket.com · +56 9 3372 2400 · Chile / Miami</div>
+    </div>
+  </div>
+
+</div>
+
+</x-dc>
+<script type="text/x-dc" data-dc-script>
+class Component extends DCLogic {
+  state = {
+    form: { nombre: '', empresa: '', correo: '', telefono: '', tipo: '', mensaje: '' },
+    formSent: false,
+    activeProductIndex: null,
+    fullImage: null,
+    mobileMenuOpen: false,
+  };
+  carouselRef = React.createRef();
+
+  componentDidMount() {
+    const io = new IntersectionObserver((entries) => {
+      entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('is-visible'); io.unobserve(e.target); } });
+    }, { threshold: 0.15 });
+    document.querySelectorAll('.pm-reveal').forEach(el => io.observe(el));
+    this._io = io;
+  }
+
+  componentWillUnmount() {
+    if (this._io) this._io.disconnect();
+  }
+
+  setField(key, e) {
+    this.setState(s => ({ form: { ...s.form, [key]: e.target.value } }));
+  }
+
+  scroll(dir) {
+    if (this.carouselRef.current) {
+      this.carouselRef.current.scrollBy({ left: dir * 260, behavior: 'smooth' });
+    }
+  }
+
+  renderVals() {
+    const diferenciadores = [
+      { title: 'Precio competitivo', text: 'Estructura de costos optimizada gracias a producción propia e importación directa de materia prima.' },
+      { title: 'Calidad certificada', text: 'Control de calidad en cada etapa, desde matricería hasta pieza final.' },
+      { title: 'Rapidez de entrega', text: 'Producción continua y planificación ajustada a tus tiempos de proyecto.' },
+      { title: 'Capacidad instalada', text: 'Infraestructura para inyección, extrusión y coextrusión a distintas escalas.' },
+      { title: 'Soluciones a medida', text: 'Diseño de matriz y color específico según tu especificación técnica.' },
+      { title: 'Certificación de marca', text: 'Respaldo de años de trayectoria y clientes reconocidos en la industria.' },
+    ];
+
+    const R = (window.__resources || {});
+    const catalogoBase = [
+      { name: 'Tabla multiuso', photo: R.prod1 || 'assets/producto-tabla-multiuso-final.jpg', bullets: ['Impresión digital', 'Logo corporativo', 'Compuesto antibacterial'] },
+      { name: 'Recubrimiento caucho/plástico metal', photo: R.prod2 || 'assets/producto-caucho-metal-final.jpg', bullets: ['Protege el metal', 'Aísla la electricidad', 'Aumenta la resistencia química', 'Colores y espesor personalizado'] },
+      { name: 'Tabla de cocina', photo: R.prod3 || 'assets/producto-tabla-cocina-final.jpg', bullets: ['Impresión digital', 'Logo corporativo', 'Compuesto antibacterial', 'Set de 5 tablas multicolor'] },
+      { name: 'Soporte malla antihelada', photo: R.prod4 || 'assets/producto-soporte-malla-final.jpg', desc: 'Aporta estructura, estabilidad y soporte de malla antihelada.', bullets: ['Medidas especiales según siembra', 'Diseño con filtro UV', 'Alta resistencia y durabilidad'] },
+      { name: 'Estacas minería', photo: R.prod5 || 'assets/producto-estacas-mineria.jpg', bullets: ['Resistencia y durabilidad', 'Colores y medidas especiales', 'Estructura de alta calidad'] },
+      { name: 'Pisos antideslizantes/antifatiga', photo: R.prod6 || 'assets/producto-pisos-antideslizantes-final.jpg', desc: 'Pisos antideslizantes / antifatiga y escurridor de agua.', bullets: ['Seguridad y protección', 'Larga duración', 'Medidas especiales'] },
+      { name: 'Gorra + casco protector', photo: R.prod7 || 'assets/producto-gorra-casco-final.jpg', bullets: ['Protección y seguridad', 'Impresión digital sobre relieve con logo corporativo', 'Alta resistencia'] },
+      { name: 'Dispositivos plásticos para FF.AA.', photo: R.prod8 || 'assets/producto-dispositivos-ffaa-final.jpg', bullets: ['Estructura flexible', 'Diseño para estructura de gorras', 'Colores según oficio', 'Armada de Chile · Carabineros de Chile · Ejército Militar Chileno · Gendarmería de Chile'] },
+      { name: 'Topes para puertas', photo: R.prod9 || 'assets/producto-topes-puertas-final.jpg', bullets: ['Evita daños', 'Diferentes colores', 'Medidas especiales'] },
+      { name: 'Láminas PVC transparentes', photo: R.prod10 || 'assets/producto-laminas-pvc.jpg', desc: 'Láminas de PVC transparentes de alta resistencia, ideales para aplicaciones industriales, comerciales y de construcción.', bullets: ['Resistencia y flexibilidad', 'Máxima utilidad, ideal para termosellado', 'Producto de calidad'] },
+    ];
+    const catalogo = catalogoBase.map((p, i) => ({
+      ...p,
+      waLink: 'https://wa.me/56933722400?text=' + encodeURIComponent('Hola, quiero cotizar: ' + p.name),
+      openModal: () => this.setState({ activeProductIndex: i }),
+      openFull: () => this.setState({ fullImage: p.photo }),
+    }));
+    const activeProduct = this.state.activeProductIndex !== null ? catalogo[this.state.activeProductIndex] : null;
+
+    const proceso = [
+      { num: '01', title: 'Consulta técnica', text: 'Nos cuentas tu proyecto: pieza, cantidad, color y material.' },
+      { num: '02', title: 'Diseño y matriz', text: 'Desarrollamos o adaptamos el molde según tu especificación.' },
+      { num: '03', title: 'Producción', text: 'Inyección, extrusión o coextrusión con control de calidad.' },
+      { num: '04', title: 'Entrega', text: 'Despacho a Chile, Miami o coordinación de importación.' },
+    ];
+
+    const heroThumbs = ['foto: planta', 'foto: producto', 'foto: matriz', 'foto: pieza final'];
+    const logoFiles = [R.logo1 || 'assets/logo-cosmetica-nacional.jpg', R.logo2 || 'assets/logo-minera-meridian.jpg', R.logo3 || 'assets/logo-hospital-san-jose.jpg', R.logo4 || 'assets/logo-pf.jpg', R.logo5 || 'assets/logo-aza.jpg', R.logo6 || 'assets/logo-cinemark.jpg', R.logo7 || 'assets/logo-nestle.jpg', R.logo8 || 'assets/logo-andes-airport.jpg', R.logo9 || 'assets/logo-panpacific.jpg', R.logo10 || 'assets/logo-gador.jpg'];
+    const clientLogos = [...logoFiles, ...logoFiles];
+
+    const faqs = [
+      { q: '¿Cuál es la cantidad mínima de pedido?', a: 'Trabajamos proyectos a medida; la cantidad mínima depende de la complejidad de la matriz y el proceso.' },
+      { q: '¿Pueden fabricar en un color específico?', a: 'Sí, formulamos el color exacto que necesites según tu especificación o muestra Pantone.' },
+      { q: '¿Qué es el compuesto antibacterial?', a: 'Un aditivo que se integra directamente al plástico durante la producción, entregando propiedades antibacteriales permanentes.' },
+      { q: '¿Trabajan con material reciclado?', a: 'Sí, desarrollamos proyectos con reciclaje industrial como materia prima, sin sacrificar calidad.' },
+      { q: '¿Hacen envíos a Miami o solo Chile?', a: 'Operamos en Chile y Miami, y gestionamos importación directa de materia prima y productos.' },
+      { q: '¿Cuánto demora una cotización?', a: 'Respondemos dentro de las 24 horas hábiles siguientes al envío de tu solicitud.' },
+      { q: '¿Fabrican matrices nuevas o solo usan existentes?', a: 'Diseñamos y fabricamos matrices nuevas a medida, y también adaptamos moldes existentes.' },
+      { q: '¿Qué certificaciones respaldan su producción?', a: 'Contamos con certificado de marca establecida y control de calidad verificado en planta.' },
+    ];
+
+    return {
+      diferenciadores, catalogo, proceso, clientLogos, faqs,
+      activeProduct,
+      fullImage: this.state.fullImage,
+      closeModal: () => this.setState({ activeProductIndex: null }),
+      closeFull: () => this.setState({ fullImage: null }),
+      stopPropagation: (e) => e.stopPropagation(),
+      mobileMenuOpen: this.state.mobileMenuOpen,
+      toggleMobileMenu: () => this.setState(s => ({ mobileMenuOpen: !s.mobileMenuOpen })),
+      closeMobileMenu: () => this.setState({ mobileMenuOpen: false }),
+      carouselRef: this.carouselRef,
+      scrollPrev: () => this.scroll(-1),
+      scrollNext: () => this.scroll(1),
+      form: this.state.form,
+      formSent: this.state.formSent,
+      formNotSent: !this.state.formSent,
+      setField_nombre: (e) => this.setField('nombre', e),
+      setField_empresa: (e) => this.setField('empresa', e),
+      setField_correo: (e) => this.setField('correo', e),
+      setField_telefono: (e) => this.setField('telefono', e),
+      setField_tipo: (e) => this.setField('tipo', e),
+      setField_mensaje: (e) => this.setField('mensaje', e),
+      submitForm: () => this.setState({ formSent: true }),
+    };
+  }
+}
+</script>
+</body>
+</html>
